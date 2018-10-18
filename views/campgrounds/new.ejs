@@ -1,0 +1,19 @@
+<%include ../partials/header%>
+
+<div class="container">
+	<h1 class="mx-auto" style="text-align: center;">Create a new campground</h1>
+	<div class="row">
+		
+		<div class="mx-auto" style="width: 30%;">
+			<form name="camp" action="/campgrounds" method="post">
+			<input class="form-control " type="text" name="name" placeholder="name" required="true">
+			<input class="form-control " type="text" name="image" placeholder="image" required="true">
+			<input class="form-control " type="text" name="description" placeholder="description" required="false"><br/>
+			<input class="btn btn-lg btn-primary btn-block" type="submit" name="submit">
+ 		</form>
+ 		<a href="/campgrounds">Go Back</a>
+		</div>
+	</div>
+
+ </div>
+<%include ../partials/footer%>

@@ -1,0 +1,45 @@
+<%include ../partials/header%>
+
+
+
+
+
+<div class="container">
+	
+<header class="jumbotron" style="background: white;">
+	<div class="container">
+			<h1>This is the campgrounds page</h1>
+		<p>view our hand-picked campground from around the world</p>
+		<P>
+			<a class="btn btn-primary btn-large" href="/campgrounds/new">Enter new Campground</a>	
+		</P>
+	</div>
+</header>
+
+<div class="row">
+	<div class="col-lg-12">
+		<h3>Our Most Popular Campgrounds</h3>
+	</div>
+</div>
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+	<%campgrounds.forEach(function(campgrounds){%>
+	<div class="col col-lg-auto">
+		
+			<img src="<%=campgrounds.image%>">	
+		<div class="caption">
+			<h4><%= campgrounds.name %></h4>
+		</div>
+		<P>
+		<a href="/campgrounds/<%= campgrounds._id %>" class="btn btn-primary">More Info</a>
+	</P>
+	</div>
+	<%});%>
+	</div>
+
+
+
+
+</div><!-- container -->
+
+<%include ../partials/footer%>
